@@ -1,0 +1,36 @@
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+h2, legend {
+    color: #335eb0;
+    font-weight: bolder;
+}
+
+fieldset {
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #1497d9;
+}
+
+td {
+    width: 30%;
+    background-color: #ecf1f3;
+    text-transform: capitalize;
+    padding-left: 5px;
+}
+
+button {
+    margin-right: 10px;
+    padding: 3px 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}

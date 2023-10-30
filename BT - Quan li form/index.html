@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/base.css">     
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/script.js"></script>
+</head>
+<body>
+    <div class="panel">
+        <div class="panel__heading">
+            <h2>purchase order form</h2>
+        </div>
+        <div class="panel__content">
+            <form action="">
+                <fieldset style="margin-top: 30px;">
+                    <legend class="content__heading">Product Information</legend>
+                    <table border="1">
+                        <tr>
+                            <td>product:</td>
+                            <td>
+                                <select required="true" name="" id="product_id" onchange="enableQuantity()">
+                                    <option value="">Select</option>
+                                    <option value="650">Comfort Sleeper</option>
+                                    <option value="975">Morgan Kids Bed</option>
+                                    <option value="480">Entertainment Cabinet</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>unit price ($):</td>
+                            <td style="width: 100%;">
+                                <input id="unitPrice_id" class="focus" type="number" value="0" style="width: 50px;" disabled="true">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>quantity:</td>
+                            <td style="width: 100%;">
+                                <input id="quantity_id" class="focus" type="number" value="0" onkeyup="totalPrice()" style="width: 50px;" disabled="true">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>total price ($):</td>
+                            <td style="width: 100%;">
+                                <input id="totalPrice_id" class="focus" type="number" value="0" style="width: 50px;" disabled="true">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset style="margin-top: 30px;">
+                    <legend class="content__heading">Shipping Information</legend>
+                    <table border="1">
+                        <tr>
+                            <td>full name:</td>
+                            <td>
+                                <input class="focus" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>shipping price:</td>
+                            <td>
+                                <textarea name="" id="" class="focus" cols="30" rows="10" style="width: 70%; height: 100px ;"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>credit card:</td>
+                            <td>
+                                <select name="" id="creditCard_id" onchange="enableCreditCard()">
+                                    <option value="">Select</option>
+                                    <option value="650">Visa</option>
+                                    <option value="975">Master Card</option>
+                                    <option value="480">American Express</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>credit card number:</td>
+                            <td>
+                                <input id="ccn1" class="focus" type="text" pattern="[0-9]{4}" maxlength="4" minlength="4" style="width: 45px;" disabled="true">
+                                <input id="ccn2" class="focus" type="text" pattern="[0-9]{4}" maxlength="4" minlength="4" style="width: 45px;" disabled="true">
+                                <input id="ccn3" class="focus" type="text" pattern="[0-9]{4}" maxlength="4" minlength="4" style="width: 45px;" disabled="true">
+                                <input id="ccn4" class="focus" type="text" pattern="[0-9]{4}" maxlength="4" minlength="4" style="width: 45px;" disabled="true">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <div class="form__button">
+                    <button>Submit</button>
+                    <button>Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
